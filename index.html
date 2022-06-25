@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="app-title">Expense Tracker</h1>
+      <h3 class="subtitle">Add A New Item</h3>
+      <div class="content">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          placeholder="Where was the expense made?"
+          class="infos"
+          id="name"
+          required
+        />
+        <label for="date">Date:</label>
+        <input type="date" class="infos" id="date" required />
+        <label for="amount">Amount:</label>
+        <input type="number" min="10" class="infos" id="amount" required />
+        <button class="add-btn">Add Expense</button>
+      </div>
+
+      <table class="results">
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Delete</th>
+        </tr>
+        <!-- <tr>
+          <td>Name</td>
+          <td>Date</td>
+          <td>Amount</td>
+          <td>
+            <button class="delete">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        </tr> -->
+        <tr class="no-expenses-add">
+          <td colspan="4">No expenses added yet!</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
